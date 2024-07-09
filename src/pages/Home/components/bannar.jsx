@@ -1,0 +1,33 @@
+import React from 'react'
+import bakground from "../../../../public/img/internet-3116062_1280-removebg-preview.png"
+import mypic from "../../../../public/img/IMG202303211604401-removebg-preview.png"
+
+
+const Bannar = () => {
+  return (
+    <div
+    className="hero rounded-xl"
+    style={{
+      backgroundImage: `url(${bakground})`,
+    }}>
+    <div className="hero-overlay bg-opacity-80 rounded-xl"></div>
+    <div className="hero-content  text-neutral-content">
+      <div className="max-w-md">
+        <h1 className="mb-5 text-3xl font-bold">Hello! I'm <br /> <span className='text-white text-5xl'>Raisul Islam</span></h1>
+        <p className="mb-5">
+          
+I am a frontend web developer skilled in HTML, CSS, JavaScript, and React, with experience in Tailwind, Firebase, Express, MongoDB, Git, GitHub, Axios, and TanStack. I build responsive, interactive interfaces and manage data integration and backend services efficiently.
+        </p>
+        <button className='btn bg-gray-600 text-white hover:border-gray-400 text-2xl'>Download cv</button>
+      </div>
+      <div>
+        <figure>
+            <img src={mypic} className='relative -bottom-4' alt="" />
+        </figure>
+      </div>
+    </div>
+   </div>
+  )
+}
+
+export default Bannar
