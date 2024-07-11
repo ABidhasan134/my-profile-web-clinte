@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMe = () => {
   return (
-    <div className="text-left border-2 border-gray-600 my-4 rounded-xl">
+    <div className="text-left border-2 border-blue-800 my-4 rounded-xl">
       <p className="mx-6 p-6 text-2xl gap-3">
         <p className="my-6">
           I am a frontend web developer with a comprehensive skill set that

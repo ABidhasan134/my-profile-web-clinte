@@ -1,8 +1,9 @@
 import React from "react";
-import Bannar from "./components/bannar";
 import TitleAndSub from "../../shard/titleAndSub";
-import AboutMe from "./aboutMe/aboutMe";
 import MyProject from "../projects/myProject";
+import AboutMe from "./aboutMe/aboutMe";
+import Bannar from "./components/bannar";
+import Skills from "./components/skills";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         subtitle="Diffrent typo of catagory project motivet from many here"
       ></TitleAndSub>
       <MyProject></MyProject>
+      <Skills></Skills>
     </div>
   );
 };

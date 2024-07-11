@@ -30,12 +30,12 @@ const SocialMidia = () => {
           </CopyToClipboard>
         </div>
       </div>
-      <div class="divider divider-horizontal"></div>
-      <a href="www.linkedin.com/in/raisul-islam134" className="text-5xl ">
+      <div class="divider divider-horizontal text-blue-600"></div>
+      <a href="https://www.linkedin.com/in/raisul-islam134/" className="text-5xl ">
         <IoLogoLinkedin className="text-blue-500"></IoLogoLinkedin>
       </a>
       <div class="divider divider-horizontal"></div>
-      <a href="www.linkedin.com/in/raisul-islam134" className="text-5xl ">
+      <a href="https://github.com/ABidhasan134" className="text-5xl ">
         <FaGithub className="text-green-800 text-5xl"></FaGithub>
       </a>
     </div>
