@@ -1,9 +1,44 @@
+import { useMutation } from '@tanstack/react-query';
 import React from 'react'
 import { useForm } from "react-hook-form";
+import useAxiosPublic from '../../../hooks/useAxiosPublic';
+import Swal from 'sweetalert2'
 
 const Connaction = () => {
+    const axiosPublic=useAxiosPublic();
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
+//   const mutation = useMutation(data => {
+//     return axiosPublic.post('/emailSend', data);
+//   });
+
+  const onSubmit = data => {
+    // mutation.mutate(data);
+    axiosPublic.post('/emailSend', data)
+    .then((res)=>{
+        if(res.status === 200)
+            {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "I got your email. I will connacte with you in 12 hours",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            }
+            else{
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "Something went wrong!",
+                  
+                });
+            }
+        console.log(res)
+    })
+   
+    // console.log(data)
+  };
+
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
