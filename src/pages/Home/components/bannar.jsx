@@ -2,6 +2,7 @@ import React from "react";
 import bakground from "../../../../public/img/internet-3116062_1280-removebg-preview.png";
 import mypic from "../../../../public/img/IMG202303211604401-removebg-preview.png";
 import SocialMidia from "./socialMidia";
+import CopyText from "./copyText";
 
 const Bannar = () => {
   return (
