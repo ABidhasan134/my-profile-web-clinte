@@ -4,6 +4,7 @@ import MyProject from "../projects/myProject";
 import AboutMe from "./aboutMe/aboutMe";
 import Bannar from "./components/bannar";
 import Skills from "./components/skills";
+import Connaction from "./connnaction/connaction";
 
 const Home = () => {
   return (
@@ -20,6 +21,8 @@ const Home = () => {
       ></TitleAndSub>
       <MyProject></MyProject>
       <Skills></Skills>
+      <TitleAndSub title="Get into Touch"></TitleAndSub>
+      <Connaction></Connaction>
     </div>
   );
 };
