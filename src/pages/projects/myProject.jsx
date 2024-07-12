@@ -20,7 +20,7 @@ const MyProject = () => {
                 <a href={item.repository_link} className="text-blue-500">
                   github repository
                 </a>
-                <Link to={`ditails/${item._id}`}>
+                <Link to={`/ditails/${item._id}`}>
                   <button className="btn">Ditails</button>
                 </Link>
               </div>

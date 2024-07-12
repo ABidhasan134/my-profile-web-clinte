@@ -13,8 +13,9 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "ditails/:id",
+        path: "/ditails/:id",
         element: <DitailsPage></DitailsPage>,
+        loader: ({ params }) => params.id,
       },
     ],
   },
