@@ -1,10 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useProjects from "../../hooks/useProjects";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
+import skeletonImg from "../../../public/img/skelton.jpg"
 
 const MyProject = () => {
-  const [projects] = useProjects();
+  const [projects,isLoading] = useProjects();
   console.log(projects);
+  if(isLoading){
+    return <div className="grid justify-center">
+      <figure> <img className="opacity-10 hover:opacity-80" src={skeletonImg} alt="" /></figure>
+      <Skeleton className="animate-pulse" count={5} /> 
+    </div>
+  }
   return (
     <div className="grid grid-cols-3">
       {projects.map((item, index) => {
