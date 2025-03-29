@@ -1,7 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-// import arrow from '../../public/img/icons8-double-right.gif'
+import logImage from '../../public/img/logoImg.png'
 
 const Navbar = () => {
     const links = (
@@ -45,7 +45,7 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl text-blue-400">ABid Hasan</a>
+          <Link to='/'><img src={logImage} alt="user image" className='w-[50px] h-[50px] rounded-3xl border-2 p-[2px] border-blue-800' /></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
