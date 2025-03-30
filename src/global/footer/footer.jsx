@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaGithub } from 'react-icons/fa'
 import { IoLogoLinkedin } from 'react-icons/io'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -36,6 +37,7 @@ const Footer = () => {
         <FaGithub className="w-8 h-8"></FaGithub>
       </a>
       </div>
+      <Link to="/developer"><button className='btn hover:border-gray-400 text-2xl'>Developer</button></Link>
     </nav>
   </footer>
   )

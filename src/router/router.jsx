@@ -3,6 +3,7 @@ import Main from "../layout/main";
 import Home from "../pages/Home/Home";
 import DitailsPage from "../pages/projects/components/ditailsPage";
 import Error from "../error/error";
+import LogIn from "../pages/developer/logIn";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
         element: <DitailsPage></DitailsPage>,
         loader: ({ params }) => params.id,
       },
+      {
+        path: "/developer",
+        element: <LogIn></LogIn>
+      }
     ],
   },
 ]);

@@ -1,5 +1,5 @@
 import React from "react";
-import TitleAndSub from "../../shard/titleAndSub";
+import TitleAndSub from "../../shared/titleAndSub";
 import MyProject from "../projects/myProject";
 import AboutMe from "./aboutMe/aboutMe";
 import Bannar from "./components/bannar";

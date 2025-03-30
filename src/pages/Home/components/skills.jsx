@@ -1,5 +1,5 @@
 import React from "react";
-import TitleAndSub from "../../../shard/titleAndSub";
+import TitleAndSub from "../../../shared/titleAndSub";
 
 const Skills = () => {
   return (
