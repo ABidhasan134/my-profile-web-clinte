@@ -1,11 +1,15 @@
 import React from "react";
+import UseLoginInfo from "../../hooks/useLoginInfo";
 
 const LogIn = () => {
+  const [devInfo,isLoading,refetch]=UseLoginInfo();
+  console.log(devInfo);
   const handleDevelop = (event) => {
     event.preventDefault();
     const email = event.target.userName.value;
     const password = event.target.password.value;
     console.log(email, password);
+    
   };
 
   return (
