@@ -1,16 +1,56 @@
 import React from "react";
-import UseLoginInfo from "../../hooks/useLoginInfo";
-
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import Swal from 'sweetalert2'
 const LogIn = () => {
-  const [devInfo,isLoading,refetch]=UseLoginInfo();
-  console.log(devInfo);
-  const handleDevelop = (event) => {
-    event.preventDefault();
-    const email = event.target.userName.value;
-    const password = event.target.password.value;
-    console.log(email, password);
+  // const [devInfo,isLoading,refetch]=UseLoginInfo();
+  // console.log(devInfo);
+    const axiosPublic=useAxiosPublic();
+    const handleDevelop = async (event) => {
+      event.preventDefault();
+      
+      const userName = event.target.userName.value;
+      const password = event.target.password.value;
+      const info = { userName, password };
     
-  };
+      try {
+        const res = await axiosPublic.post('/logInDev', info);
+        
+        if (res.data.status === 200) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "You can now develop",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        } else if (res.data.status === 403) {
+          Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: "Your password is wrong",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        } else {
+          Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: "Your username is not valid",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      } catch (error) {
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "Something went wrong. Please try again.",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        console.error("Login error:", error);
+      }
+    };
 
   return (
     <div className="flex justify-center items-center min-h-[600px]">
