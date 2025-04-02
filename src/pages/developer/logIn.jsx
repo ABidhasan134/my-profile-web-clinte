@@ -16,6 +16,7 @@ const LogIn = () => {
         const res = await axiosPublic.post('/logInDev', info);
         
         if (res.data.status === 200) {
+          localStorage.setItem('developer', JSON.stringify(res.data.result));
           Swal.fire({
             position: "top-end",
             icon: "success",
@@ -23,6 +24,7 @@ const LogIn = () => {
             showConfirmButton: false,
             timer: 1500,
           });
+          
         } else if (res.data.status === 403) {
           Swal.fire({
             position: "top-end",
