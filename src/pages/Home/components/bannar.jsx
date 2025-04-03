@@ -3,6 +3,7 @@ import bakground from "../../../../public/img/internet-3116062_1280-removebg-pre
 import mypic from "../../../../public/img/IMG202303211604401-removebg-preview.png";
 import SocialMidia from "./socialMidia";
 import CopyText from "./copyText";
+import resume from '../../../../public/assets/Raisul_Islam_Resume.pdf'
 
 const Bannar = () => {
   return (
@@ -28,7 +29,7 @@ const Bannar = () => {
               services efficiently.
             </p>
             <button className="btn bg-gray-600 text-white hover:border-gray-400 text-2xl">
-              Download cv
+              <a href={resume} download={resume}>Download cv</a>
             </button>
           </div>
           <div>
