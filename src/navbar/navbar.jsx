@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import logImage from '../../public/img/logoImg.png'
+import { AuthContext } from '../context/authProvider';
 
 const Navbar = () => {
+  const {developer}=useContext(AuthContext);
+  // console.log("this is from the navbar",developer);
     const links = (
         <>
             <li className='text-2xl'>
@@ -18,6 +21,11 @@ const Navbar = () => {
             <li className='text-2xl'>
                 <NavLink to='about'>About</NavLink>
             </li>
+            {
+              developer?.userName?<li className='text-2xl'>
+              <NavLink to='develop'>develop</NavLink>
+          </li>:''
+            }
         </>
     )
 

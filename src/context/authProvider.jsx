@@ -12,17 +12,17 @@ const AuthProvider = ({children}) => {
       try{
         const parseDeveloper= JSON.parse(developer)
         axiosPublic.post('/jwt',)
-        console.log("This is from the authh provider",parseDeveloper)
-        setDeveloper(parseDeveloper.userName)
-        setLoading(false)
+        // console.log("This is from the authh provider",parseDeveloper)
+        setDeveloper(parseDeveloper)
+        setLoading(false);
 
       }
       catch(e){
         console.log("this error from the auth",e)
       }
     }
-    console.log("This is current developer from auth",developer);
-  },[developer])
+    // console.log("This is current developer from auth",developer);
+  },[])
   const authInfo={developer,setDeveloper,loading,setLoading}
   return (
     <AuthContext.Provider value={authInfo}>

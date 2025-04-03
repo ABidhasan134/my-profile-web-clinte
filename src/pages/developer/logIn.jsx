@@ -24,7 +24,9 @@ const LogIn = () => {
             showConfirmButton: false,
             timer: 1500,
           });
-          
+          setTimeout(()=>{
+            window.location.reload();
+          },[2000])
         } else if (res.data.status === 403) {
           Swal.fire({
             position: "top-end",
