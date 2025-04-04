@@ -29,7 +29,7 @@ const Bannar = () => {
               services efficiently.
             </p>
             <button className="btn bg-gray-600 text-white hover:border-gray-400 text-2xl">
-              <a href={resume} download={resume}>Download cv</a>
+              <a href={'https://blue-yolande-60.tiiny.site/'} download={'https://blue-yolande-60.tiiny.site/'}>Download cv</a>
             </button>
           </div>
           <div>
