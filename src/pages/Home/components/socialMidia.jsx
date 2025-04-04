@@ -18,6 +18,8 @@ const SocialMidia = () => {
       <a
         className="text-5xl "
         href="https://www.facebook.com/profile.php?id=100008589552530"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <FaFacebook className="text-blue-500"></FaFacebook>
       </a>
@@ -31,11 +33,21 @@ const SocialMidia = () => {
         </div>
       </div>
       <div class="divider divider-horizontal text-blue-600"></div>
-      <a href="https://www.linkedin.com/in/raisul-islam134/" className="text-5xl ">
+      <a
+        href="https://www.linkedin.com/in/raisul-islam134/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-5xl "
+      >
         <IoLogoLinkedin className="text-blue-500"></IoLogoLinkedin>
       </a>
       <div class="divider divider-horizontal"></div>
-      <a href="https://github.com/ABidhasan134" className="text-5xl ">
+      <a
+        href="https://github.com/ABidhasan134"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-5xl "
+      >
         <FaGithub className="text-green-800 text-5xl"></FaGithub>
       </a>
     </div>
