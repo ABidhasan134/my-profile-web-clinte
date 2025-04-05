@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import logImage from '../../public/img/logoImg.png'
 import { AuthContext } from '../context/authProvider';
+import Connaction from '../pages/Home/connnaction/connaction';
 
 const Navbar = () => {
   const {developer}=useContext(AuthContext);
@@ -61,8 +62,21 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <NavLink className='btn hover:border-gray-400 text-2xl'>Hire me <MdKeyboardDoubleArrowRight></MdKeyboardDoubleArrowRight></NavLink>
+          {/* Open the modal using document.getElementById('ID').showModal() method */}
+<button className="btn hover:border-gray-400 text-2xl" onClick={()=>document.getElementById('my_modal_1').showModal()}>Hire me <MdKeyboardDoubleArrowRight></MdKeyboardDoubleArrowRight></button>
+<dialog id="my_modal_1" className="modal">
+  <div className="modal-box">
+    <Connaction></Connaction>
+    <div className="modal-action">
+      <form method="dialog">
+        {/* if there is a button in form, it will close the modal */}
+        <button className="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
         </div>
+          {/* <NavLink className='btn hover:border-gray-400 text-2xl'>Hire me <MdKeyboardDoubleArrowRight></MdKeyboardDoubleArrowRight></NavLink> */}
       </div>
     )
 }

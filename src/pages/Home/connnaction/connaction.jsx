@@ -1,8 +1,9 @@
 import { useMutation } from '@tanstack/react-query';
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
 import useAxiosPublic from '../../../hooks/useAxiosPublic';
 import Swal from 'sweetalert2'
+import { MdPerson } from "react-icons/md";
 
 const Connaction = () => {
     const axiosPublic=useAxiosPublic();
@@ -72,9 +73,9 @@ const Connaction = () => {
       </div>
       {/* email body */}
       <div className="w-[100%] grid text-start">
-        <span>Email body</span>
+        <span>your message</span>
         <textarea
-          placeholder="Write your email here"
+          placeholder="Write your message here"
           name="emailBody"
           className={`mt-2 input input-bordered textarea textarea-info ${errors.emailBody ? 'input-error' : 'input-info'} w-full`}
           defaultValue=""
@@ -83,7 +84,7 @@ const Connaction = () => {
         {errors.emailBody && <span className="text-red-500">Email body is required</span>}
       </div>
 
-      <button className='btn bg-blue-800 text-white text-3xl hover:bg-blue-500 hover:text-black my-4' type='submit'>Send Email</button>
+      <button className='btn bg-blue-800 text-white text-xl hover:bg-blue-500 hover:text-black my-4' type='submit'>Send Email</button>
     </form>
   )
 }
