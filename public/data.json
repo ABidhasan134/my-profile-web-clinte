@@ -2,67 +2,80 @@
     {
       "skillName": "HTML",
       "Link": "https://www.w3schools.com/html/",
-      "discription": "HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It defines elements like headings, paragraphs, images, links, and more. HTML forms the backbone of all websites, making it essential for any web development project. It works closely with CSS and JavaScript to build interactive and visually appealing web pages."
+      "discription": "HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It defines elements like headings, paragraphs, images, links, and more. HTML forms the backbone of all websites, making it essential for any web development project. It works closely with CSS and JavaScript to build interactive and visually appealing web pages.",
+      "imgLink":"https://i.ibb.co/kg9VN01/html-removebg-preview.png"
     },
     {
       "skillName": "CSS",
       "Link": "https://www.w3schools.com/css/",
-      "discription": "CSS (Cascading Style Sheets) is used to style and layout web pages. It allows developers to apply colors, fonts, spacing, and responsive designs. CSS works hand-in-hand with HTML to bring visual appeal and user experience to websites."
+      "discription": "CSS (Cascading Style Sheets) is used to style and layout web pages. It allows developers to apply colors, fonts, spacing, and responsive designs. CSS works hand-in-hand with HTML to bring visual appeal and user experience to websites.",
+      "imgLink":"https://i.ibb.co/CwZKH2Q/css-removebg-preview.png"
     },
     {
       "skillName": "Tailwind CSS",
       "Link": "https://tailwindcss.com/",
-      "discription": "Tailwind CSS is a utility-first CSS framework that enables rapid UI development. It provides low-level utility classes that let you build custom designs without writing traditional CSS. It’s great for creating responsive, consistent, and modern UIs efficiently."
+      "discription": "Tailwind CSS is a utility-first CSS framework that enables rapid UI development. It provides low-level utility classes that let you build custom designs without writing traditional CSS. It’s great for creating responsive, consistent, and modern UIs efficiently.",
+      "imgLink":"https://i.ibb.co/fx13Lf0/tailwind-removebg-preview.png"
     },
     {
       "skillName": "Material UI",
       "Link": "https://mui.com/",
-      "discription": "Material UI (MUI) is a popular React UI framework that implements Google’s Material Design. It offers a wide range of customizable components that help developers build attractive and consistent user interfaces faster and more efficiently."
+      "discription": "Material UI (MUI) is a popular React UI framework that implements Google’s Material Design. It offers a wide range of customizable components that help developers build attractive and consistent user interfaces faster and more efficiently.",
+      "imgLink":"https://i.ibb.co/r4pqZ75/mui-removebg-preview.png"
     },
     {
       "skillName": "JavaScript",
       "Link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      "discription": "JavaScript is a versatile programming language used to create dynamic and interactive web content. It enables client-side behaviors, real-time updates, form validation, animations, and more. JavaScript is essential for modern web development."
+      "discription": "JavaScript is a versatile programming language used to create dynamic and interactive web content. It enables client-side behaviors, real-time updates, form validation, animations, and more. JavaScript is essential for modern web development.",
+      "imgLink":"https://i.ibb.co/QmZVLJj/js-removebg-preview.png"
     },
     {
       "skillName": "React",
       "Link": "https://reactjs.org/",
-      "discription": "React is a powerful JavaScript library for building user interfaces. It allows developers to create reusable UI components and manage application state efficiently. React’s component-based structure makes it ideal for building fast and scalable web apps."
+      "discription": "React is a powerful JavaScript library for building user interfaces. It allows developers to create reusable UI components and manage application state efficiently. React’s component-based structure makes it ideal for building fast and scalable web apps.",
+      "imgLink":"https://i.ibb.co/JskhJcr/react-removebg-preview.png"
     },
     {
       "skillName": "Firebase",
       "Link": "https://firebase.google.com/",
-      "discription": "Firebase is a platform by Google that provides backend services like authentication, real-time databases, cloud functions, and hosting. It helps developers build and scale web and mobile applications quickly without managing complex backend infrastructure."
+      "discription": "Firebase is a platform by Google that provides backend services like authentication, real-time databases, cloud functions, and hosting. It helps developers build and scale web and mobile applications quickly without managing complex backend infrastructure.",
+      "imgLink":"https://i.ibb.co/2yLzBrf/firebase-removebg-preview.png"
     },
     {
       "skillName": "Express.js",
       "Link": "https://expressjs.com/",
-      "discription": "Express.js is a minimal and flexible Node.js web application framework. It provides a set of powerful tools to build RESTful APIs and web applications. Express simplifies server-side development and is often used with MongoDB in full-stack projects."
+      "discription": "Express.js is a minimal and flexible Node.js web application framework. It provides a set of powerful tools to build RESTful APIs and web applications. Express simplifies server-side development and is often used with MongoDB in full-stack projects.",
+      "imgLink":"https://i.ibb.co/YTrVwtG/express-removebg-preview.png"
     },
     {
       "skillName": "MongoDB",
       "Link": "https://www.mongodb.com/",
-      "discription": "MongoDB is a NoSQL database that stores data in a flexible, JSON-like format. It is highly scalable and ideal for handling large volumes of unstructured data. MongoDB is often used with Node.js and Express in modern web development stacks."
+      "discription": "MongoDB is a NoSQL database that stores data in a flexible, JSON-like format. It is highly scalable and ideal for handling large volumes of unstructured data. MongoDB is often used with Node.js and Express in modern web development stacks.",
+      "imgLink":"https://i.ibb.co/RbdWvJM/mongodb-removebg-preview.png"
     },
     {
       "skillName": "TanStack",
       "Link": "https://tanstack.com/",
-      "discription": "TanStack is a collection of modern data management libraries like React Query, TanStack Table, and TanStack Router. These tools help handle data fetching, caching, routing, and table manipulation in a highly efficient and developer-friendly way."
+      "discription": "TanStack is a collection of modern data management libraries like React Query, TanStack Table, and TanStack Router. These tools help handle data fetching, caching, routing, and table manipulation in a highly efficient and developer-friendly way.",
+      "imgLink":"https://i.ibb.co/0M4t0mv/tanstake-removebg-preview.png"
     },
     {
       "skillName": "Axios",
       "Link": "https://axios-http.com/",
-      "discription": "Axios is a popular promise-based HTTP client for JavaScript. It simplifies the process of making asynchronous requests to APIs and handling responses. Axios supports interceptors, error handling, and request/response transformations."
+      "discription": "Axios is a popular promise-based HTTP client for JavaScript. It simplifies the process of making asynchronous requests to APIs and handling responses. Axios supports interceptors, error handling, and request/response transformations.",
+      "imgLink":"https://i.ibb.co/nQqGDqc/axios-removebg-preview.png"
     },
     {
       "skillName": "Git",
       "Link": "https://git-scm.com/",
-      "discription": "Git is a version control system that helps developers track changes in their codebase. It allows collaborative development, branching, and code merging. Git is an essential tool for managing code history and working on projects efficiently."
+      "discription": "Git is a version control system that helps developers track changes in their codebase. It allows collaborative development, branching, and code merging. Git is an essential tool for managing code history and working on projects efficiently.",
+      "imgLink":"https://i.ibb.co/DQQ1NZZ/git-removebg-preview.png"
     },
     {
       "skillName": "Next.js",
       "Link": "https://nextjs.org/",
-      "discription": "Next.js is a React-based framework for building fast, scalable, and SEO-friendly web applications. It supports features like server-side rendering, static site generation, API routes, and image optimization out of the box."
+      "discription": "Next.js is a React-based framework for building fast, scalable, and SEO-friendly web applications. It supports features like server-side rendering, static site generation, API routes, and image optimization out of the box.",
+      "imgLink":"https://i.ibb.co.com/9mhMNvPm/netlify-eleventy-api-img-netlify-removebg-preview.png"
     }
   ]
   

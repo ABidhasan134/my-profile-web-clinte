@@ -7,9 +7,8 @@ const UseSkills = () => {
   const {data:skills=[],isLoading,refetch}=useQuery({
     queryKey: ["skills"],
     queryFn: async()=>{
-        const response= await axiosPublic.get('/skill');
-        const data= response.data;
-        console.log(data);
+        const response= await axiosPublic.get('/skills');
+        return response.data.result;
     }
   })
   return [skills,isLoading,refetch];
