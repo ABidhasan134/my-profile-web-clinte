@@ -5,10 +5,17 @@ import AboutMe from "./aboutMe/aboutMe";
 import Bannar from "./components/bannar";
 import Skills from "./components/skills";
 import Connaction from "./connnaction/connaction";
+import { Helmet } from "react-helmet-async";
+import Contactinfo from "./components/contactinfo";
 
 const Home = () => {
   return (
     <div className="text-center">
+      <Helmet>
+        <title>
+          Rasul Islam || Home
+        </title>
+      </Helmet>
       <Bannar></Bannar>
       <TitleAndSub
         title="About Raisul"
@@ -21,6 +28,7 @@ const Home = () => {
       ></TitleAndSub>
       <MyProject></MyProject>
       <Skills></Skills>
+      <Contactinfo></Contactinfo>
       <TitleAndSub title="Get into Touch"></TitleAndSub>
       <Connaction></Connaction>
     </div>

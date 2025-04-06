@@ -1,13 +1,17 @@
 import React from 'react'
 import { FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import UseSkills from '../../../hooks/useSkills';
 
 const Contactinfo = () => {
+  const [skills]=UseSkills();
+  console.log(skills);
   return (
     <div>
       <ul className="timeline timeline-vertical">
+
   <li>
-    <div className="timeline-start">Facebook</div>
+    <div className="timeline-start"><a href="https://www.w3schools.com/html/" target='_blanck'><img className="h-[80px] w-[80px] opacity-30 hover:opacity-100" src="https://i.ibb.co/kg9VN01/html-removebg-preview.png" alt="html" /></a></div>
     <div className="timeline-middle">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +24,7 @@ const Contactinfo = () => {
           clipRule="evenodd" />
       </svg>
     </div>
-    <div className="timeline-end timeline-box"><a href='https://www.facebook.com/profile.php?id=100008589552530'><FaFacebook className='text-blue-500'></FaFacebook></a></div>
+    <div className="timeline-end timeline-box"><p>HTML (HyperText Markup Language) is the standard language used to create and structure content on the web. It defines elements like headings, paragraphs, images, links, and more. HTML forms the backbone of all websites, making it essential for any web development project. It works closely with CSS and JavaScript to build interactive and visually appealing web pages.</p></div>
     <hr />
   </li>
   <li>
