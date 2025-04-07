@@ -3,10 +3,21 @@ import bakground from "../../../../public/img/internet-3116062_1280-removebg-pre
 import mypic from "../../../../public/img/IMG202303211604401-removebg-preview.png";
 import SocialMidia from "./socialMidia";
 import CopyText from "./copyText";
-import resume from '../../../../public/assets/Raisul_Islam_Resume.pdf'
+import resume from "../../../../public/assets/Raisul_Islam_Resume.pdf";
+import { motion } from "motion/react";
 
 const Bannar = () => {
+  const transition = {
+    duration: 0.8,
+    delay: 0.5,
+    ease: [0, 0.71, 0.2, 1.01],
+  };
   return (
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={transition}
+      >
     <div className="flex">
       <div
         className="hero rounded-xl"
@@ -29,19 +40,25 @@ const Bannar = () => {
               services efficiently.
             </p>
             <button className="btn bg-gray-600 text-white hover:border-gray-400 text-2xl">
-              <a href={'https://blue-yolande-60.tiiny.site/'} download={'https://blue-yolande-60.tiiny.site/'}>Download cv</a>
+              <a
+                href={"https://blue-yolande-60.tiiny.site/"}
+                download={"https://blue-yolande-60.tiiny.site/"}
+              >
+                Download cv
+              </a>
             </button>
           </div>
           <div>
-            <figure>
-              <img src={mypic} className="relative -bottom-4" alt="" />
-            </figure>
+              <figure>
+                <img src={mypic} className="relative -bottom-4" alt="" />
+              </figure>
           </div>
         </div>
       </div>
       {/* social midia */}
       <SocialMidia></SocialMidia>
     </div>
+            </motion.div>
   );
 };
 

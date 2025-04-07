@@ -18,6 +18,7 @@ const Skills = () => {
         <img className="h-[120px] w-[120px] opacity-30 hover:opacity-100" src="https://i.ibb.co/0M4t0mv/tanstake-removebg-preview.png" alt="" />
         <img className="h-[120px] w-[120px] opacity-30 hover:opacity-100" src="https://i.ibb.co/nQqGDqc/axios-removebg-preview.png" alt="" />
         <img className="h-[120px] w-[120px] opacity-30 hover:opacity-100" src="https://i.ibb.co/DQQ1NZZ/git-removebg-preview.png" alt="" />
+        <img className="h-[120px] w-[120px] opacity-30 hover:opacity-100" src="https://i.ibb.co.com/9mhMNvPm/netlify-eleventy-api-img-netlify-removebg-preview.png" alt="" />
         <img src="" alt="" />
       </figure>
     </div>

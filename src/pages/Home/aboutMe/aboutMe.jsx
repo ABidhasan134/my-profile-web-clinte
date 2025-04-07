@@ -1,8 +1,8 @@
 import React from "react";
-
+import abPic from '../../../../public/img/abpic.png'
 const AboutMe = () => {
   return (
-    <div className="text-left border-2 border-blue-800 my-4 rounded-xl">
+    <div className="flex justify-between text-left border-2 border-blue-800 my-4 rounded-xl">
       <p className="mx-6 p-6 text-2xl gap-3">
         <p className="my-6">
           I am a frontend web developer with a comprehensive skill set that
@@ -37,8 +37,8 @@ const AboutMe = () => {
         </p>
       </p>
       {/*  */}
-      <div>
-
+      <div className="relative grid right-1 bottom-0  items-center">
+            <img className="h-[400px] w-[1200px]" src={abPic} alt="" />
       </div>
     </div>
   );
