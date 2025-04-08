@@ -1,20 +1,15 @@
-import { useQuery } from "@tanstack/react-query";
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
-import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import "./style.css";
+import { AuthContext } from "../../../context/authProvider";
+import useOneProject from "../../../hooks/useOneProject";
+
 
 const DitailsPage = () => {
-  const axiosPublic = useAxiosPublic();
+  const {developer}=useContext(AuthContext);
   const id = useLoaderData();
-  const { data: projectsDetails = [] } = useQuery({
-    queryKey: ["projectsDetails"],
-    queryFn: async () => {
-      const res = await axiosPublic.get(`/projectsDetails/${id}`);
-      return res.data;
-    },
-  });
-  console.log(id, projectsDetails);
+  const [projectsDetails,isLoading,refetch]=useOneProject(id);
+  // console.log(id, projectsDetails);
   return (
     <div>
       <div className="hero bg-base-200 min-h-screen">
@@ -65,6 +60,13 @@ const DitailsPage = () => {
             <a href={projectsDetails.repository_link}>
               <button className="btn btn-primary">View Repository</button>
             </a>
+            {
+              developer?.userName && <Link to={`/updateProject/${id}`}>
+              <button className="btn btn-primary">Update</button>
+            </Link>
+            }
+            
+
             </div>
           </div>
         </div>

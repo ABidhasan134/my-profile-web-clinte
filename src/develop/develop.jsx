@@ -11,6 +11,7 @@ const Develop = () => {
         </title>
       </Helmet>
       <TitleAndSub title={`Bennar`} subtitle={`change your bannar Image & dev photo`}></TitleAndSub>
+      <TitleAndSub title={`Add project`} subtitle={`Add a new project as you done`}></TitleAndSub>
     </div>
   )
 }

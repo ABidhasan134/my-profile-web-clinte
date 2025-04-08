@@ -1,16 +1,11 @@
-import { useMutation } from '@tanstack/react-query';
 import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
 import useAxiosPublic from '../../../hooks/useAxiosPublic';
 import Swal from 'sweetalert2'
-import { MdPerson } from "react-icons/md";
 
 const Connaction = () => {
     const axiosPublic=useAxiosPublic();
   const { register, handleSubmit, formState: { errors } } = useForm();
-//   const mutation = useMutation(data => {
-//     return axiosPublic.post('/emailSend', data);
-//   });
 
   const onSubmit = data => {
     // mutation.mutate(data);

@@ -5,6 +5,7 @@ import DitailsPage from "../pages/projects/components/ditailsPage";
 import Error from "../error/error";
 import LogIn from "../pages/developer/logIn";
 import Develop from "../develop/develop";
+import UpdateProject from "../pages/developer/components/updateProject";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path:"/develop",
         element: <Develop></Develop>
+      },
+      {
+        path: "/updateProject/:id",
+        element: <UpdateProject></UpdateProject>,
+        loader: ({ params }) => params.id,
       }
     ],
   },
