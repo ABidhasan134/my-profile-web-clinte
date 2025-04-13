@@ -6,6 +6,7 @@ import Error from "../error/error";
 import LogIn from "../pages/developer/logIn";
 import Develop from "../develop/develop";
 import UpdateProject from "../pages/developer/components/updateProject";
+import Blogs from "../pages/blog/blogs";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         path: "/updateProject/:id",
         element: <UpdateProject></UpdateProject>,
         loader: ({ params }) => params.id,
+      },
+      {
+        path: '/blogs',
+        element: <Blogs></Blogs>
       }
     ],
   },
