@@ -8,7 +8,7 @@ const UseBlogs = () => {
     queryKey: ["allBlogs"],
     queryFn: async()=>{
         const res= await axiosPublic.get('/allBlogs');
-        return res.data
+        return res.data.result
     }
   })
   return [allBlogs,isLoading,refetch];

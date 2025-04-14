@@ -15,7 +15,7 @@ const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById('root')).render(
   
   <HelmetProvider>
-    <AnimatedCursor color='30, 64, 175'/>
+    <AnimatedCursor  color='30, 64, 175'/>
   <AuthProvider>
   <QueryClientProvider client={queryClient}>
   <RouterProvider router={router}>
