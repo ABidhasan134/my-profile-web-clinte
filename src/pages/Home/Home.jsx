@@ -7,8 +7,6 @@ import Skills from "./components/skills";
 import Connaction from "./connnaction/connaction";
 import { Helmet } from "react-helmet-async";
 import Contactinfo from "./components/contactinfo";
-// import { motion } from "motion/react"
-import AnimatedCursor from "react-animated-cursor"
 
 const Home = () => {
   return (
@@ -17,8 +15,6 @@ const Home = () => {
       <Helmet>
         <title>Rasul Islam || Home</title>
       </Helmet>
-      {/* <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} /> */}
-      <AnimatedCursor color='30, 64, 175'/>
       <Bannar></Bannar>
       <TitleAndSub
         title="About Raisul"

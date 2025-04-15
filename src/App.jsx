@@ -2,11 +2,11 @@
 import './App.css'
 import Navbar from './navbar/navbar'
 
-function App() {
-  
 
+function App() {
   return (
     <>
+    
       <Navbar></Navbar>
       <h1>here I go </h1>
    </>
