@@ -1,6 +1,8 @@
-import React from 'react'
-
+import React, { useContext } from 'react'
+import {AuthContext} from '../../context/authProvider'
+import { Link } from 'react-router-dom'
 const BlogsCard = ({blog}) => {
+  const {developer}=useContext(AuthContext)
   return (
 <div
   class="z-40 my-6 group flex flex-col justify-center items-start gap-2  duration-500 relative rounded-lg p-4 bg-[#2A323C] hover:-translate-y-2 hover:shadow-xl shadow-black"
@@ -16,8 +18,7 @@ const BlogsCard = ({blog}) => {
     <small class="mb-4 text-white">{blog.date}</small>
     <p class="text-gray-200 line-clamp-5">{blog.description}</p>
   </div>
-  
-<button className="btn" onClick={()=>document.getElementById(blog._id).showModal()}>Full blog</button>
+<button className="btn hover:border-gray-400 text-l" onClick={()=>document.getElementById(blog._id).showModal()}>Full blog</button>
 <dialog id={blog._id} className='bg-transparent'>
   <div className="modal-box relative  border-2 border-blue-500 max-w-[1000px] p-6">
     <h3 className="font-bold text-lg">{blog.title}</h3>
@@ -35,6 +36,10 @@ const BlogsCard = ({blog}) => {
     </div>
   </div>
 </dialog>
+{
+  developer?
+<Link to={`/blogUpdate/${blog._id}`}><button className="btn hover:border-gray-400 text-l">Update</button></Link>:''
+}
 </div>
 
   )
