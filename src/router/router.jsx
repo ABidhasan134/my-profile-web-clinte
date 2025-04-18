@@ -7,7 +7,7 @@ import LogIn from "../pages/developer/logIn";
 import Develop from "../develop/develop";
 import UpdateProject from "../pages/developer/components/updateProject";
 import Blogs from "../pages/blog/blogs";
-import BologUpdate from '../pages/blog/blogUpdate/blogUpdate'
+import BologUpdate from "../pages/developer/components/blogUpdate/blogUpdate";
 
 const router = createBrowserRouter([
   {
@@ -42,8 +42,9 @@ const router = createBrowserRouter([
         element: <Blogs></Blogs>
       },
       {
-        path: '//blogUpdate/:id',
-        element: <BologUpdate></BologUpdate>
+        path: '/blogUpdate/:id',
+        element: <BologUpdate></BologUpdate>,
+        loader: ({params})=>params.id,
       }
     ],
   },
