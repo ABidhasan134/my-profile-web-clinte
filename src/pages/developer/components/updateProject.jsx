@@ -5,8 +5,8 @@ import useOneProject from "../../../hooks/useOneProject";
 import axios from "axios";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
-const IMG_HOSTING_KEY = import.meta.env.VITE_IMAGE_HOSTING_KEY;
-const img_hoting_api = `https://api.imgbb.com/1/upload?key=${IMG_HOSTING_KEY}`;
+export const IMG_HOSTING_KEY = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+export const img_hoting_api = `https://api.imgbb.com/1/upload?key=${IMG_HOSTING_KEY}`;
 
 const UpdateProject = () => {
   const id = useLoaderData();

@@ -1,14 +1,14 @@
 import { useQuery } from '@tanstack/react-query'
-import axios from 'axios'
-import React from 'react'
+import useAxiosPublic from './useAxiosPublic'
 
 const UseOneBlog = (id) => {
-  console.log(id)
+  const axiouPublic=useAxiosPublic()
+  // console.log(id)
   const {data:oneBlog={},isLoading,refetch}=useQuery({
     queryKey: ['oneBlog',id],
     queryFn: async()=>{
-        const res= await axios.get(`/blog/${id}`)
-        console.log(res.data);
+        const res= await axiouPublic.get(`/blog/${id}`)
+        // console.log(res.data);
         return res.data;
     }
   })
