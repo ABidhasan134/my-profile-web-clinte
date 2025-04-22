@@ -4,11 +4,13 @@ import { useLoaderData } from "react-router-dom";
 import UseOneBlog from "../../../../hooks/useOneBlog";
 import axios from "axios";
 import { img_hoting_api } from "../updateProject";
+import useAxiosPublic from "../../../../hooks/useAxiosPublic";
 
 const BlogUpdate = () => {
   const id = useLoaderData();
   const [oneBlog, isLoading, refetch] = UseOneBlog(id);
   const formData = new FormData();
+  const axiosPublice= useAxiosPublic();
   // console.log(oneBlog)
   const {
     register,
@@ -24,7 +26,16 @@ const BlogUpdate = () => {
       headers: {
         "Content-Type": "multipart/form-data",
       }})
-      console.log(res)
+      if(res.data.success){
+        const imgHostURL = { img_hoting_URL: res.data.data.url};
+        console.log(imgHostURL)
+      const updateRes = await axiosPublice.put(
+        `/blog/${oneBlog._id}`,
+        { ...data, ...imgHostURL}
+      );
+      console.log(updateRes.data);
+    }
+      // console.log(res)
   };
   if (isLoading) {
     return <p>Loading......</p>;
