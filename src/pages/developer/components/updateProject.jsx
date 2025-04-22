@@ -33,10 +33,10 @@ const UpdateProject = () => {
         `/projects/${projectsDetails._id}`,
         { ...data, ...imgHostURL}
       );
-      console.log(updateRes.data);
+      // console.log(updateRes.data);
       }
 
-    console.log("This is from the update", res);
+    // console.log("This is from the update", res);
   };
   // console.log(id);
   if (isLoading) {

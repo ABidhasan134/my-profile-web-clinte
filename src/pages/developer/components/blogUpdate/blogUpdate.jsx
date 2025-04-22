@@ -5,6 +5,7 @@ import UseOneBlog from "../../../../hooks/useOneBlog";
 import axios from "axios";
 import { img_hoting_api } from "../updateProject";
 import useAxiosPublic from "../../../../hooks/useAxiosPublic";
+import Swal from 'sweetalert2'
 
 const BlogUpdate = () => {
   const id = useLoaderData();
@@ -20,7 +21,7 @@ const BlogUpdate = () => {
   } = useForm();
 
   const onSubmit =async(data) => {
-    console.log(data);
+    // console.log(data);
     formData.append("image", data.image[0]);
     const res = await axios.post(img_hoting_api, formData, {
       headers: {
@@ -28,12 +29,21 @@ const BlogUpdate = () => {
       }})
       if(res.data.success){
         const imgHostURL = { img_hoting_URL: res.data.data.url};
-        console.log(imgHostURL)
+        // console.log(imgHostURL)
       const updateRes = await axiosPublice.put(
         `/blog/${oneBlog._id}`,
         { ...data, ...imgHostURL}
       );
       console.log(updateRes.data);
+      if(updateRes.data.result.modifiedCount>0){
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Abid your blog updated",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      }
     }
       // console.log(res)
   };
