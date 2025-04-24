@@ -1,12 +1,13 @@
 import React from "react";
 import TitleAndSub from "../../shared/titleAndSub";
 import MyProject from "../projects/myProject";
-import AboutMe from "./aboutMe/aboutMe";
 import Bannar from "./components/bannar";
 import Skills from "./components/skills";
 import Connaction from "./connnaction/connaction";
 import { Helmet } from "react-helmet-async";
 import Contactinfo from "./components/contactinfo";
+import AboutMe from "../about/aboutMe/aboutMe";
+import Certificate from "../about/components/certificate";
 
 const Home = () => {
   return (
@@ -28,6 +29,8 @@ const Home = () => {
       <MyProject></MyProject>
       <Skills></Skills>
       <Contactinfo></Contactinfo>
+      <TitleAndSub title="Certificate" subtitle='importen certificates'></TitleAndSub>
+      <Certificate></Certificate>
       <TitleAndSub title="Get into Touch"></TitleAndSub>
       <Connaction></Connaction>
     </div>
