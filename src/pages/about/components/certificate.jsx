@@ -7,9 +7,9 @@ const Certificate = () => {
    <div className='flex flex-wrap justify-center gap-4'>
      <div className="group relative text-center w-96 px-6 py-7 rounded-md overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.6,0.4,0,1)] transform border-2 border-blue-600 flex flex-col justify-center items-center gap-4 text-black">
       <div className="icon">
-        <figure>
+        <a href={phCertificate} target='_blank'>
           <img src={phCertificate} alt="pH certificate" className='w-96'/>
-        </figure>
+        </a>
       </div>
       <strong className="text-white text-[1.4rem] tracking-[-0.035em]  transition-all duration-300 ease-[cubic-bezier(0.6,0.4,0,1)]">
         Frontend webdevelopmete by programing Hero

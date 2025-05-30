@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "profile-abidhasan134"
-  }
+    "default": "profile-abidhasan134",
+    "/": "profile-abidhasan134"
+  },
+  "targets": {},
+  "etags": {}
 }

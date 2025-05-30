@@ -16,7 +16,9 @@ const ProjectCard = ({ item, index }) => {
       className="card bg-base-100 w-96 shadow-xl border-2 border-blue-800 pt-5"
     >
       <figure>
+      <a href={item.live_link || item.repository_link} target="_blank">
         <img className="h-[300px]" src={item.homepage_img} alt="Project" />
+      </a>
       </figure>
       <div className="card-body">
         <h2 className="card-title">{item.project_name}</h2>

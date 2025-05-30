@@ -12,13 +12,15 @@ const DitailsPage = () => {
   // console.log(id, projectsDetails);
   return (
     <div>
-      <div className="hero bg-base-200 min-h-screen">
+      <div className="hero bg-base-200 rounded-xl min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="w-[50%]">
+          <a href={projectsDetails.live_link || item.repository_link} target="_blank">
           <img
             src={projectsDetails.homepage_img}
             className="max-w-sm rounded-lg shadow-2xl w-[100%]"
           />
+          </a>
           </div>
           <div className="text-2xl w-[50%]">
             <h1 className="text-5xl font-bold">
