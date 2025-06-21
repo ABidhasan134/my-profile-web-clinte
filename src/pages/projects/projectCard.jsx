@@ -13,7 +13,7 @@ const ProjectCard = ({ item, index }) => {
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="card bg-base-100 w-96 shadow-xl border-2 border-blue-800 pt-5"
+      className="card bg-base-100 w-96 shadow-xl border-2 border-blue-800 pt-5 mb-10"
     >
       <figure>
       <a href={item.live_link || item.repository_link} target="_blank">

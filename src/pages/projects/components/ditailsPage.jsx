@@ -9,13 +9,16 @@ const DitailsPage = () => {
   const {developer}=useContext(AuthContext);
   const id = useLoaderData();
   const [projectsDetails,isLoading,refetch]=useOneProject(id);
-  // console.log(id, projectsDetails);
+  console.log(id, projectsDetails);
+  if(isLoading){
+    return <div>Loading Ditails</div>
+  }
   return (
     <div>
       <div className="hero bg-base-200 rounded-xl min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="w-[50%]">
-          <a href={projectsDetails.live_link || item.repository_link} target="_blank">
+          <a href={projectsDetails.live_link || projectsDetails.repository_link} target="_blank">
           <img
             src={projectsDetails.homepage_img}
             className="max-w-sm rounded-lg shadow-2xl w-[100%]"
@@ -27,15 +30,15 @@ const DitailsPage = () => {
               {projectsDetails.project_name}
             </h1>
             <small>Category : {projectsDetails.project_category}</small>
-            <p className="py-6">{projectsDetails.project_sort_discription}</p>
+            <p className="py-6">{projectsDetails.project_sort_description}</p>
             <hr className="border-1 border-blue-500 w-full my-6 border-solid" />
-            <p>{projectsDetails.project_long_discription}</p>
+            <p>{projectsDetails.project_long_description}</p>
             <hr className="border-1 border-blue-500 w-full my-6 border-solid" />
             <span className="text-blue-400 font-bold text-3xl p-2 rounded-3xl shadow-2xl m-2">Facilitys:</span>
             
-            {projectsDetails.ficture && projectsDetails.ficture.length > 0 ? (
+            {projectsDetails.features && projectsDetails.features.length > 0 ? (
               <div className="list-inside list-disc">
-                {projectsDetails.ficture.map((feature, index) => (
+                {projectsDetails.features.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}
               </div>
@@ -44,10 +47,10 @@ const DitailsPage = () => {
             )}
             <hr className="border-1 border-blue-500 w-full my-6 border-solid" />
             <span className="text-blue-400 font-bold text-3xl p-2 rounded-3xl shadow-2xl m-2">Tecnology:</span>
-            {projectsDetails.tecnology_use && projectsDetails.tecnology_use.length > 0 ? (
+            {projectsDetails.technology_used && projectsDetails.technology_used.length > 0 ? (
               <div className="list-inside list-disc">
-                {projectsDetails.tecnology_use.map((feature, index) => (
-                  <li key={index}>{feature}</li>
+                {projectsDetails.technology_used.map((technology_use, index) => (
+                  <li key={index}>{technology_use}</li>
                 ))}
               </div>
             ) : (
